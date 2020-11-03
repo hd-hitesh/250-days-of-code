@@ -1,0 +1,6 @@
+	//Frequesncy
+	unordered_map<int, int> mp;
+	for (int i = 0; i < m; ++i)
+		for (int j = 0; j < m; ++j)
+			if ( i != j  )
+				mp[ar[i][j]]++;

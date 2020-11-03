@@ -6,14 +6,13 @@
 #define sc second
 #define MOD 1e9 + 7
 #define len(x) x.size()
+#define all(x) x.begin(),x.end()
 #define min(a, b) ((a) < (b) ? (a) : (b))
 #define max(a, b) ((a) > (b) ? (a) : (b))
 #define min3(a, b, c) min(a, min(b, c))
 #define max3(a, b, c) max(a, max(b, c))
 #define FOR(i, n) for (ll i = 0; i < n; i++)
 #define FORR(i, n) for (ll i = n - 1; i >= 0; i--)
-#define all(v) v.begin(), v.end()
-#define alla(a, n) a, a + n
 #define endl "\n";
 #define fast                          \
     ios_base::sync_with_stdio(false); \
@@ -33,13 +32,49 @@ typedef vector<string> vs;
 typedef unordered_map<int, int> mp;
 typedef unordered_map<ll, ll> mpl;
 
-
 void solve()
 {
-	int n, m;
-	cin >> n >> m;
-	cout << n << m;
+	ull n, q , ans;
+	cin >> n >> q;
+	ull ar[n];
 
+	//input
+	FOR(i, n)
+	{
+		cin >> ar[i];
+	}
+
+	ans = n;
+	FOR(i, n - 1)
+	{
+		if (ar[i] == ar[i + 1])
+			ans--;
+	}
+
+	//queries
+	FOR(i, q)
+	{
+
+		ull x, y;
+		cin >> x >> y;
+		x--;
+		// ar[x] = y;
+
+		if (x != 0)
+		{
+			if (ar[x] != ar[x - 1]) ans--;
+			if (y != ar[x - 1]) ans++;
+		}
+		if (x != n - 1)
+		{
+			if (ar[x] != ar[x + 1]) ans--;
+			if (y != ar[x + 1]) ans++;
+		}
+
+		ar[x]=y;
+		cout << ans << endl;
+
+	}
 }
 
 int main()
@@ -55,7 +90,7 @@ int main()
 	while (t--)
 	{
 		solve();
-		cout << endl;
+		// cout << endl;
 	}
 
 	return 0;
@@ -66,3 +101,16 @@ int main()
 // ctrl + B          :  build
 // ctrl + X          :  cut the line
 // ctrl +
+
+/*
+input
+1
+5 2
+1 1 2 5 2
+1 3
+4 2
+
+output
+5
+3
+*/

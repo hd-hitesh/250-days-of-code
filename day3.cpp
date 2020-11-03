@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 void solve()
 {
 	int n, m , x, sum = 0;
@@ -65,3 +64,13 @@ int main()
 // ctrl + B          :  build
 // ctrl + X          :  cut the line
 // ctrl +
+
+//input
+// 3 2
+// 5 7
+// 2 5
+// 4 6
+// 1
+
+//output
+// 2

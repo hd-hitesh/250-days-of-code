@@ -36,8 +36,12 @@ typedef unordered_map<ll, ll> mpl;
 
 void solve()
 {
-	int n, m;
-	cin >> n >> m;
+	int n,k,x,y;
+	    cin>>n>>k>>x>>y;
+	    
+	     y = abs(y - x);
+         if (y % __gcd(n, k) == 0) cout << "YES\n";
+         else cout << "NO\n";
 
 }
 
@@ -54,7 +58,7 @@ int main()
 	while (t--)
 	{
 		solve();
-		cout << endl;
+		// cout << endl;
 	}
 
 	return 0;
@@ -65,3 +69,4 @@ int main()
 // ctrl + B          :  build
 // ctrl + X          :  cut the line
 // ctrl +
+//https://www.codechef.com/submit/CVDRUN

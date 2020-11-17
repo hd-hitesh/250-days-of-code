@@ -11,6 +11,7 @@
 #define min3(a, b, c) min(a, min(b, c))
 #define max3(a, b, c) max(a, max(b, c))
 #define FOR(i, n) for (ll i = 0; i < n; i++)
+// #define FOR(i,j,n) for(int i=j;i<n;i++)
 #define FORR(i, n) for (ll i = n - 1; i >= 0; i--)
 #define all(v) v.begin(), v.end()
 #define alla(a, n) a, a + n

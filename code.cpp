@@ -12,11 +12,12 @@
 #define max3(a, b, c) max(a, max(b, c))
 #define FOR(i, n) for (ll i = 0; i < n; i++)
 // #define FOR(i,j,n) for(int i=j;i<n;i++)
+// #define FORR(i,j,n) for(int i=j;i>n;i--)
 #define FORR(i, n) for (ll i = n - 1; i >= 0; i--)
 #define all(v) v.begin(), v.end()
 #define alla(a, n) a, a + n
 #define endl "\n";
-#define fast                          \
+#define tez_chal_bsdk                          \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL);
@@ -45,7 +46,7 @@ void solve()
 
 int main()
 {
-	fast;
+	tez_chal_bsdk;
 #ifndef ONLINE_JUDGE
 	freopen("input1.txt", "r", stdin);
 	freopen("output1.txt", "w", stdout);
